@@ -10,5 +10,14 @@ import SwiftUI
 struct LinkRow: View {
     let link: String
 
-    // Implementation of LinkRow
+    var body: some View {
+        HStack {
+            Image(systemName: "link")
+            Text("Sample link name...")
+            Spacer()
+            Text("2323\nClicks")
+                .multilineTextAlignment(.trailing)
+        }
+        .padding()
+    }
 }

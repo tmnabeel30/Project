@@ -13,7 +13,7 @@ struct OpeninApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DashboardView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

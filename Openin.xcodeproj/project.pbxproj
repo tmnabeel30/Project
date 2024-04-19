@@ -8,21 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		5D5815B22BD284D000428A1E /* OpeninApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5815B12BD284D000428A1E /* OpeninApp.swift */; };
-		5D5815B42BD284D000428A1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5815B32BD284D000428A1E /* ContentView.swift */; };
+		5D5815B42BD284D000428A1E /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5815B32BD284D000428A1E /* DashboardView.swift */; };
 		5D5815B62BD284D300428A1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D5815B52BD284D300428A1E /* Assets.xcassets */; };
 		5D5815B92BD284D300428A1E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D5815B82BD284D300428A1E /* Preview Assets.xcassets */; };
 		5D5815BB2BD284D300428A1E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5815BA2BD284D300428A1E /* Persistence.swift */; };
 		5D5815BE2BD284D300428A1E /* Openin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D5815BC2BD284D300428A1E /* Openin.xcdatamodeld */; };
+		5D5815C52BD28CDF00428A1E /* MetricTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5815C42BD28CDF00428A1E /* MetricTile.swift */; };
+		5D5815C72BD28CF800428A1E /* LinkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5815C62BD28CF800428A1E /* LinkRow.swift */; };
+		5D5815C92BD28D0500428A1E /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5815C82BD28D0500428A1E /* AnalyticsView.swift */; };
+		5D5815CB2BD28D1400428A1E /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5815CA2BD28D1400428A1E /* ChartView.swift */; };
+		5D5815CD2BD28E0200428A1E /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5815CC2BD28E0200428A1E /* SampleData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5D5815AE2BD284D000428A1E /* Openin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Openin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5815B12BD284D000428A1E /* OpeninApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeninApp.swift; sourceTree = "<group>"; };
-		5D5815B32BD284D000428A1E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5D5815B32BD284D000428A1E /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		5D5815B52BD284D300428A1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D5815B82BD284D300428A1E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5D5815BA2BD284D300428A1E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		5D5815BD2BD284D300428A1E /* Openin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Openin.xcdatamodel; sourceTree = "<group>"; };
+		5D5815C42BD28CDF00428A1E /* MetricTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricTile.swift; sourceTree = "<group>"; };
+		5D5815C62BD28CF800428A1E /* LinkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkRow.swift; sourceTree = "<group>"; };
+		5D5815C82BD28D0500428A1E /* AnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsView.swift; sourceTree = "<group>"; };
+		5D5815CA2BD28D1400428A1E /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		5D5815CC2BD28E0200428A1E /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +66,12 @@
 			isa = PBXGroup;
 			children = (
 				5D5815B12BD284D000428A1E /* OpeninApp.swift */,
-				5D5815B32BD284D000428A1E /* ContentView.swift */,
+				5D5815B32BD284D000428A1E /* DashboardView.swift */,
+				5D5815CC2BD28E0200428A1E /* SampleData.swift */,
+				5D5815C62BD28CF800428A1E /* LinkRow.swift */,
+				5D5815C82BD28D0500428A1E /* AnalyticsView.swift */,
+				5D5815CA2BD28D1400428A1E /* ChartView.swift */,
+				5D5815C42BD28CDF00428A1E /* MetricTile.swift */,
 				5D5815B52BD284D300428A1E /* Assets.xcassets */,
 				5D5815BA2BD284D300428A1E /* Persistence.swift */,
 				5D5815BC2BD284D300428A1E /* Openin.xcdatamodeld */,
@@ -144,8 +159,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D5815BE2BD284D300428A1E /* Openin.xcdatamodeld in Sources */,
+				5D5815CB2BD28D1400428A1E /* ChartView.swift in Sources */,
 				5D5815BB2BD284D300428A1E /* Persistence.swift in Sources */,
-				5D5815B42BD284D000428A1E /* ContentView.swift in Sources */,
+				5D5815C52BD28CDF00428A1E /* MetricTile.swift in Sources */,
+				5D5815B42BD284D000428A1E /* DashboardView.swift in Sources */,
+				5D5815C92BD28D0500428A1E /* AnalyticsView.swift in Sources */,
+				5D5815C72BD28CF800428A1E /* LinkRow.swift in Sources */,
+				5D5815CD2BD28E0200428A1E /* SampleData.swift in Sources */,
 				5D5815B22BD284D000428A1E /* OpeninApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

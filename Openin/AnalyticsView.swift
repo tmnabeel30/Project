@@ -5,4 +5,11 @@
 //  Created by Nabeel on 19/04/24.
 //
 
-import Foundation
+import SwiftUI
+
+struct AnalyticsView: View {
+    var body: some View {
+        Text("Analytics View")
+    }
+}
+
