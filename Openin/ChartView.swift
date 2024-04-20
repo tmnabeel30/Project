@@ -7,7 +7,86 @@
 
 import SwiftUI
 import Charts
+
+struct ChartView: View {
+    var data: [Double]
+    var maxValue: Double {
+        return data.max() ?? 0
+    }
+
+    var body: some View {
+//            HStack{
+//                Text("OverView")
+//                    .font(.system(size: 24, weight: .bold))
+//                Text("22nd Aug - 23Aug")
+//                    .font(.system(size: 24, weight: .bold))
 //
+//            }
+            ZStack{
+
+                GeometryReader { geometry in
+                    Path { path in
+                        for index in data.indices {
+                            let x = geometry.size.width * CGFloat(Double(index) / Double(data.count - 1))
+                            let y = geometry.size.height - CGFloat(data[index]) / CGFloat(maxValue) * geometry.size.height
+                            
+    print(x,y)
+                            if index == 0 {
+                                path.move(to: CGPoint(x: x, y: y))
+                            } else {
+                                path.addLine(to: CGPoint(x: x, y: y))
+                            }
+                        }
+                    }
+                    .stroke(Color.blue, lineWidth: 2)
+                    // Draw the x-axis
+                       Path { path in
+                           path.move(to: CGPoint(x: 0, y: geometry.size.height))
+                           path.addLine(to: CGPoint(x: geometry.size.width, y: geometry.size.height))
+                       }
+                       .stroke(Color.gray.opacity(0.5), lineWidth: 0.5)
+
+                    // Draw vertical lines and months
+                    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+                      ForEach(0..<months.count, id: \.self) { index in
+                          let x = geometry.size.width * CGFloat(Double(index) / Double(months.count - 1))
+                          Path { path in
+                              path.move(to: CGPoint(x: x, y: 0))
+                              path.addLine(to: CGPoint(x: x, y: geometry.size.height))
+                          }
+                          .stroke(Color.gray.opacity(0.3), lineWidth: 0.5)
+
+                          Text(months[index])
+                              .font(.caption)
+                              .foregroundColor(.gray)
+                              .offset(x: x, y: geometry.size.height + 10)
+                      }
+                    // Draw Horuzontak lines
+
+                    @State var textValues: [Int] = Array(repeating: 0, count: data.count)
+
+                    // Draw Horizontal lines
+                    ForEach(0..<data.count, id: \.self) { index in
+                        let y = (geometry.size.height) * CGFloat(Double(index) / Double(data.count - 1))
+                        Path { path in
+                            path.move(to: CGPoint(x: 0, y: y))
+                            path.addLine(to: CGPoint(x: geometry.size.width, y: y))
+                        }
+                        .stroke(Color.gray.opacity(0.5), lineWidth: 0.5)
+
+                        Text("h")
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                            .offset(x: -10, y: y)
+                    }
+                    
+                }
+            }
+            .frame(height: 136)
+            .padding()
+
+        }
+}
 //struct ChartView: UIViewRepresentable {
 //    var chartData: [ChartData]
 //

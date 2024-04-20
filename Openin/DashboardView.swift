@@ -2,15 +2,20 @@ import SwiftUI
 import Charts
 import CoreData
 
+var jsonData: JSONData?
+
 struct DashboardView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    let data: [Double] = [25, 30, 45, 60, 70, 55, 65, 80] // Replace with your actual data
+    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+
 
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading, spacing: 2) {
                     // Greeting
-                    
+                    VStack(alignment: .leading){
                         Text("Good Morning")
                             .font(.system(size: 24)) // smaller font size
                             .foregroundColor(.gray) // lighter grey color
@@ -18,18 +23,16 @@ struct DashboardView: View {
                         Text("Avay Manva👋")
                             .font(.system(size: 32, weight: .semibold)) // bigger, bolder font
                             .foregroundColor(.black) // black color
-                        
-                    .alignmentGuide(.leading) { _ in
-                                0 // Align to the leading edge of the containing view
-                            }
-                    .padding(.horizontal, 20) // add padding for a better layout
+                            // add padding for a better layout
+                        ChartView(data: data)
+                            .frame(height: 200)
+                            .padding()
+                            .background(.white)
+                            .cornerRadius(10)
+                    }
+                    .padding(.horizontal, 20)
                     
-
-                    // Chart
-//                    ChartView(chartData: chartData)
-//                        .frame(height: 200)
-//                        .padding()
-
+                
                     // Metrics
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 10) {
@@ -39,49 +42,79 @@ struct DashboardView: View {
                         }
                         .padding()
                     }
-                    Spacer()
                     
-                    //Button
+                }
+                
+                
+                VStack{
                     Button(action: {
                         // Action to perform when the button is tapped
                     }) {
-                        Image("button_image")
+                        Image("Button")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(maxWidth: 300) // Adjust the maximum width as needed
+                            .frame(maxWidth: 350) // Adjust the maximum width as needed
                     }
-                    .padding(.horizontal, 20) // Add horizontal padding of 20
+                    
                     Spacer()
-//                    .frame(height: 200)
-                    // Links
-                    VStack(alignment: .leading) {
-                        Text("Top Links")
-                            .font(.headline)
+
+                    
+                  
+                 
+                    VStack(alignment: .leading, spacing: 20) {
+                        SubBar()
+                            
                         ForEach(linkData, id: \.self) { link in
-                            LinkRow(link: link)
+                            LinkRow(samplelinkName: "Avocado", productLink: link)
+                                .frame(width: 328)
+                            
                         }
-                        NavigationLink(destination: AnalyticsView()) {
-                            Text("View all Links")
-                        }
+                       
                     }
                     .padding()
+                    
+                    Button(action: {
+                        // Action to perform when the button is tapped
+                    }) {
+                        Image("ViewLinkButton")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(maxWidth: 328) // Adjust the maximum width as needed
+                    }
+                    
+                    
+                }
+                VStack{
+                    Button(action: {
+                        // Action to perform when the button is tapped
+                    }) {
+                        Image("Whatsapp")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(maxWidth: 328) // Adjust the maximum width as needed
+                    }
+                    
+                    Button(action: {
+                        // Action to perform when the button is tapped
+                    }) {
+                        Image("Questions")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(maxWidth: 328) // Adjust the maximum width as needed
+                    }
                 }
             }
+            
             .background(Color(red: 0.95, green: 0.95, blue: 0.95))
             .navigationBarTitle("Dashboard", displayMode: .inline)
         }
     }
-
+    
+    init() {
+     fetchData()
+    }
+    
 }
-
-
-
-
-//struct ChartData: Identifiable {
-//    let id = UUID()
-//    let date: Date
-//    let clicks: Double
-//}
 
 
 struct ContentView_Previews: PreviewProvider {
