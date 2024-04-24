@@ -15,12 +15,13 @@
 		5D5815BE2BD284D300428A1E /* Openin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D5815BC2BD284D300428A1E /* Openin.xcdatamodeld */; };
 		5D5815C52BD28CDF00428A1E /* MetricTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5815C42BD28CDF00428A1E /* MetricTile.swift */; };
 		5D5815C72BD28CF800428A1E /* LinkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5815C62BD28CF800428A1E /* LinkRow.swift */; };
-		5D5815C92BD28D0500428A1E /* ToolkitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5815C82BD28D0500428A1E /* ToolkitView.swift */; };
+		5D5815C92BD28D0500428A1E /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5815C82BD28D0500428A1E /* Toolbar.swift */; };
 		5D5815CB2BD28D1400428A1E /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5815CA2BD28D1400428A1E /* ChartView.swift */; };
 		5D5815CD2BD28E0200428A1E /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5815CC2BD28E0200428A1E /* SampleData.swift */; };
 		5D5815D12BD3521400428A1E /* SubBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5815D02BD3521400428A1E /* SubBar.swift */; };
 		5D8588052BD3A5B3004D9F88 /* FetchjsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8588042BD3A5B3004D9F88 /* FetchjsonData.swift */; };
-		5D8588072BD4042E004D9F88 /* JsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8588062BD4042E004D9F88 /* JsonData.swift */; };
+		5D8588072BD4042E004D9F88 /* JsonStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8588062BD4042E004D9F88 /* JsonStructure.swift */; };
+		5DB987252BD94F000048B8AB /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB987242BD94F000048B8AB /* TopBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,12 +34,13 @@
 		5D5815BD2BD284D300428A1E /* Openin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Openin.xcdatamodel; sourceTree = "<group>"; };
 		5D5815C42BD28CDF00428A1E /* MetricTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricTile.swift; sourceTree = "<group>"; };
 		5D5815C62BD28CF800428A1E /* LinkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkRow.swift; sourceTree = "<group>"; };
-		5D5815C82BD28D0500428A1E /* ToolkitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolkitView.swift; sourceTree = "<group>"; };
+		5D5815C82BD28D0500428A1E /* Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toolbar.swift; sourceTree = "<group>"; };
 		5D5815CA2BD28D1400428A1E /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		5D5815CC2BD28E0200428A1E /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		5D5815D02BD3521400428A1E /* SubBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubBar.swift; sourceTree = "<group>"; };
 		5D8588042BD3A5B3004D9F88 /* FetchjsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchjsonData.swift; sourceTree = "<group>"; };
-		5D8588062BD4042E004D9F88 /* JsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonData.swift; sourceTree = "<group>"; };
+		5D8588062BD4042E004D9F88 /* JsonStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonStructure.swift; sourceTree = "<group>"; };
+		5DB987242BD94F000048B8AB /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,16 +73,10 @@
 		5D5815B02BD284D000428A1E /* Openin */ = {
 			isa = PBXGroup;
 			children = (
+				5D85880D2BD50F67004D9F88 /* View */,
+				5D85880C2BD50F4A004D9F88 /* Data */,
 				5D5815B12BD284D000428A1E /* OpeninApp.swift */,
-				5D5815B32BD284D000428A1E /* DashboardView.swift */,
-				5D5815CC2BD28E0200428A1E /* SampleData.swift */,
-				5D5815C62BD28CF800428A1E /* LinkRow.swift */,
-				5D5815C82BD28D0500428A1E /* ToolkitView.swift */,
-				5D5815D02BD3521400428A1E /* SubBar.swift */,
-				5D5815CA2BD28D1400428A1E /* ChartView.swift */,
 				5D8588042BD3A5B3004D9F88 /* FetchjsonData.swift */,
-				5D8588062BD4042E004D9F88 /* JsonData.swift */,
-				5D5815C42BD28CDF00428A1E /* MetricTile.swift */,
 				5D5815B52BD284D300428A1E /* Assets.xcassets */,
 				5D5815BA2BD284D300428A1E /* Persistence.swift */,
 				5D5815BC2BD284D300428A1E /* Openin.xcdatamodeld */,
@@ -95,6 +91,29 @@
 				5D5815B82BD284D300428A1E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5D85880C2BD50F4A004D9F88 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5D5815CC2BD28E0200428A1E /* SampleData.swift */,
+				5D8588062BD4042E004D9F88 /* JsonStructure.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5D85880D2BD50F67004D9F88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D5815B32BD284D000428A1E /* DashboardView.swift */,
+				5DB987242BD94F000048B8AB /* TopBar.swift */,
+				5D5815C62BD28CF800428A1E /* LinkRow.swift */,
+				5D5815D02BD3521400428A1E /* SubBar.swift */,
+				5D5815CA2BD28D1400428A1E /* ChartView.swift */,
+				5D5815C42BD28CDF00428A1E /* MetricTile.swift */,
+				5D5815C82BD28D0500428A1E /* Toolbar.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,12 +190,13 @@
 				5D5815CB2BD28D1400428A1E /* ChartView.swift in Sources */,
 				5D5815BB2BD284D300428A1E /* Persistence.swift in Sources */,
 				5D8588052BD3A5B3004D9F88 /* FetchjsonData.swift in Sources */,
+				5DB987252BD94F000048B8AB /* TopBar.swift in Sources */,
 				5D5815C52BD28CDF00428A1E /* MetricTile.swift in Sources */,
 				5D5815B42BD284D000428A1E /* DashboardView.swift in Sources */,
 				5D5815D12BD3521400428A1E /* SubBar.swift in Sources */,
-				5D5815C92BD28D0500428A1E /* ToolkitView.swift in Sources */,
+				5D5815C92BD28D0500428A1E /* Toolbar.swift in Sources */,
 				5D5815C72BD28CF800428A1E /* LinkRow.swift in Sources */,
-				5D8588072BD4042E004D9F88 /* JsonData.swift in Sources */,
+				5D8588072BD4042E004D9F88 /* JsonStructure.swift in Sources */,
 				5D5815CD2BD28E0200428A1E /* SampleData.swift in Sources */,
 				5D5815B22BD284D000428A1E /* OpeninApp.swift in Sources */,
 			);

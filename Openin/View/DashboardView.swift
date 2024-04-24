@@ -21,28 +21,9 @@ struct DashboardView: View {
                     ZStack{
                         // Blue background
                         Color(red: 0.06274509803921569, green: 0.4235294117647059, blue: 0.9882352941176471).edgesIgnoringSafeArea(.all)
-                        
-                        
-                        
-                        
-                        
-                        // Text at the top (white)
+
                         VStack{
-                            HStack{
-                                Text("Dashboard")
-                                    .font(.system(size: 24, weight: .bold))
-                                    .foregroundColor(.white)
-                                    .padding(.bottom, 10)
-                                    .padding()
-                                //                    //                                       .padding(.bottom, 5)
-                                //                    //                                       .padding(.top, 5)
-                                //                        .padding(.all, 20)
-                                Spacer()
-                                Image("SettingButton")
-                                
-                                    .padding(.bottom, 10)
-                                    .padding()
-                            }
+                            TopBar()//Makes Dashboard and setting Button
                             .frame(height: 30)
                             .padding(.top, 20)
                             
@@ -72,7 +53,7 @@ struct DashboardView: View {
                                     // Metrics
                                     ScrollView(.horizontal, showsIndicators: false) {
                                         HStack(spacing: 10) {
-                                            MetricTile(value: "\(jsonData?.total_clicks ?? 0)", label: "Today's clicks", imageName: "Clicks")
+                                            MetricTile(value: "\(jsonData?.today_clicks ?? 0)", label: "Today's clicks", imageName: "Clicks")
                                             MetricTile(value: (jsonData?.top_location) ?? "N/A" , label: "Top Location", imageName: "City")
                                             MetricTile(value: (jsonData?.top_source) ?? "N/A", label: "Top source", imageName: "Globe")
                                             MetricTile(value: "11:00pm - 12:00am", label: "Best Time", imageName: "time")                                        }
@@ -125,7 +106,7 @@ struct DashboardView: View {
                                 VStack{
                                     Button(action: {
                                         // Action to perform when the button is tapped
-                                        let url = "whatsapp://send?phone=+91\(jsonData?.support_whatsapp_number)&abid=12354&text=Hello "
+                                        let url = "whatsapp://send?phone=+916360481897&abid=12354&text=Hello "
                                         let whatUpUrl = NSURL(string: url)
                                         if UIApplication.shared.canOpenURL(whatUpUrl! as URL){
                                             UIApplication.shared.openURL(whatUpUrl! as URL)
