@@ -28,13 +28,13 @@ struct MetricTile: View {
             VStack(alignment: .leading, spacing: 5) {
 
                        Text(value)
-                           .font(.system(size: 16, weight: .bold))
+                           .font(.system(size: 14, weight: .bold))
                            .font(.largeTitle)
                           
                            
                        
                        Text(label)
-                           .font(.system(size: 14, weight: .light))
+                           .font(.system(size: 12, weight: .light))
 
                            .font(.body)
                            .foregroundColor(.gray)

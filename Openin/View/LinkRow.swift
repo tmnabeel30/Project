@@ -10,6 +10,7 @@ import SwiftUI
 struct LinkRow: View {
     let samplelinkName: String
     let productLink: String
+    let TotalClicks:Int
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -31,7 +32,7 @@ struct LinkRow: View {
                 Spacer()
 
                 VStack {
-                    Text("2323")
+                    Text("\(TotalClicks)")
                         .font(.system(size: 14, weight: .semibold))
                     Text("clicks")
                         .font(.system(size: 12, weight: .light))
